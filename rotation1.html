@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<style>
+    
+    
+    @-webkit-keyframes orbit2 {
+	from { 	-webkit-transform: rotate(0deg) translateX(230px) rotate(0deg); }
+	to   {  -webkit-transform: rotate(360deg) translateX(230px) rotate(-360deg); }
+}
+
+@-moz-keyframes orbit2 {
+	from { 	-moz-transform: rotate(0deg) translateX(230px) rotate(0deg); }
+	to   {  -moz-transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+}
+
+@-o-keyframes orbit2 {
+	from { 	-o-transform: rotate(0deg) translateX(230px) rotate(0deg); }
+	to   {  -o-transform: rotate(360deg) translateX(230px) rotate(-360deg); }
+}
+
+@keyframes orbit2 {
+	from { 	transform: rotate(0deg) translateX(230px) rotate(0deg); }
+	to   {  transform: rotate(360deg) translateX(230px) rotate(-360deg); }
+/*
+    
+     0% { 	transform: rotate(0deg) translateX(230px) rotate(0deg); }
+    20% { transform:rotate(72deg) translateX(230px) rotate(-72deg); }
+    40% { transform:rotate(144deg) translateX(230px) rotate(-144deg);  }
+    80% { transform:rotate(216deg) translateX(230px) rotate(-216deg); }
+    100% { transform:rotate(360deg) translateX(230px) rotate(-360deg); }
+*/
+}
+ 
+    
+ @-webkit-keyframes orbit2_2 {
+	from { 	-webkit-transform: rotate(72deg) translateX(230px) rotate(-72deg); }
+	to   {  -webkit-transform: rotate(432deg) translateX(230px) rotate(-432deg); }
+}
+
+@-moz-keyframes orbit2_2 {
+	from { 	-moz-transform: rotate(72deg) translateX(230px) rotate(-72deg); }
+	to   {  -moz-transform: rotate(432deg) translateX(150px) rotate(-432deg); }
+}
+
+@-o-keyframes orbit2_2 {
+	from { 	-o-transform: rotate(72deg)  translateX(230px) rotate(-72deg); }
+	to   {  -o-transform: rotate(432deg) translateX(230px) rotate(-432deg); }
+}
+
+@keyframes orbit2_2 {
+	from { 	transform: rotate(72deg) translateX(230px) rotate(-72deg); }
+	to   {  transform: rotate(432deg) translateX(230px) rotate(-432deg); }
+}
+    
+    
+@-webkit-keyframes orbit2_3 {
+	from { 	-webkit-transform: rotate(144deg) translateX(230px) rotate(-144deg); }
+	to   {  -webkit-transform: rotate(504deg) translateX(230px) rotate(-504deg); }
+}
+
+@-moz-keyframes orbit2_3 {
+	from { 	-moz-transform: rotate(144deg) translateX(230px) rotate(-144deg); }
+	to   {  -moz-transform: rotate(504deg) translateX(150px) rotate(-504deg); }
+}
+
+@-o-keyframes orbit2_3 {
+	from { 	-o-transform: rotate(144deg)  translateX(230px) rotate(-144deg); }
+	to   {  -o-transform: rotate(504deg) translateX(230px) rotate(-504deg); }
+}
+
+@keyframes orbit2_3 {
+	from { 	transform: rotate(144deg) translateX(230px) rotate(-144deg); }
+	to   {  transform: rotate(504deg) translateX(230px) rotate(-504deg); }
+}
+    
+    
+    
+    
+    /** 4 **/
+    
+    @-webkit-keyframes orbit2_4 {
+	from { 	-webkit-transform: rotate(216deg) translateX(230px) rotate(-216deg); }
+	to   {  -webkit-transform: rotate(576deg) translateX(230px) rotate(-576deg); }
+}
+
+@-moz-keyframes orbit2_4 {
+	from { 	-moz-transform: rotate(216deg) translateX(230px) rotate(-216deg); }
+	to   {  -moz-transform: rotate(576deg) translateX(150px) rotate(-576deg); }
+}
+
+@-o-keyframes orbit2_4 {
+	from { 	-o-transform: rotate(216deg)  translateX(230px) rotate(-216deg); }
+	to   {  -o-transform: rotate(576deg) translateX(230px) rotate(-576deg); }
+}
+
+@keyframes orbit2_4 {
+	from { 	transform: rotate(216deg) translateX(230px) rotate(-216deg); }
+	to   {  transform: rotate(576deg) translateX(230px) rotate(-576deg); }
+}
+    
+    
+/* 5 */
+    
+    
+      
+    @-webkit-keyframes orbit2_5 {
+	from { 	-webkit-transform: rotate(288deg) translateX(230px) rotate(-288deg); }
+	to   {  -webkit-transform: rotate(648deg) translateX(230px) rotate(-648deg); }
+}
+
+@-moz-keyframes orbit2_5 {
+	from { 	-moz-transform: rotate(288deg) translateX(230px) rotate(-288deg); }
+	to   {  -moz-transform: rotate(648deg) translateX(150px) rotate(-648deg); }
+}
+
+@-o-keyframes orbit2_5 {
+	from { 	-o-transform: rotate(288deg)  translateX(230px) rotate(-288deg); }
+	to   {  -o-transform: rotate(648deg) translateX(230px) rotate(-648deg); }
+}
+
+@keyframes orbit2_5 {
+	from { 	transform: rotate(288deg) translateX(230px) rotate(-288deg); }
+	to   {  transform: rotate(648deg) translateX(230px) rotate(-648deg); }
+}
+    
+.hundi{
+  background: url('rotation/center.png');
+  background-position: center 209px;
+  background-repeat: no-repeat;
+  position: absolute;
+  display: block;
+  width: 644px;
+  border: none;
+  margin: 0 auto;
+  height: 644px;
+  overflow: hidden;
+    z-index: 999px;
+}
+    
+.example{
+  background: url('rotation/circle.png');
+  background-position: center 152px;
+  background-repeat: no-repeat;
+  position: relative;
+  display: block;
+  width: 644px;
+  border: none;
+  margin: 0 auto;
+  height: 644px;
+  overflow: hidden;
+}
+    
+.saturn {
+    left: 234px;
+    position: absolute;
+    top: 233px;
+    z-index: -11;
+    
+    -webkit-animation: orbit2 8s linear infinite; 
+       -moz-animation: orbit2 8s linear infinite; 
+         -o-animation: orbit2 8s linear infinite; 
+            animation: orbit2 8s linear infinite; 
+   
+}
+    
+    
+    .saturn2 {
+   left: 234px;
+    position: absolute;
+    top: 233px;
+        z-index: -11;
+        
+    -webkit-animation: orbit2_2 8s linear infinite; 
+       -moz-animation: orbit2_2 8s linear infinite; 
+         -o-animation: orbit2_2 8s linear infinite; 
+            animation: orbit2_2 8s linear infinite; 
+}
+    
+     .saturn3 {
+   left: 234px;
+    position: absolute;
+    top: 233px;
+         
+         z-index: -11;
+        
+    -webkit-animation: orbit2_3 8s linear infinite; 
+       -moz-animation: orbit2_3 8s linear infinite; 
+         -o-animation: orbit2_3 8s linear infinite; 
+            animation: orbit2_3 8s linear infinite; 
+}
+    
+     .saturn4 {
+   left: 234px;
+    position: absolute;
+    top: 233px;
+         
+         z-index: -11;
+        
+    -webkit-animation: orbit2_4 8s linear infinite; 
+       -moz-animation: orbit2_4 8s linear infinite; 
+         -o-animation: orbit2_4 8s linear infinite; 
+            animation: orbit2_4 8s linear infinite; 
+}
+    
+    
+     .saturn5 {
+   left: 234px;
+    position: absolute;
+    top: 233px;
+         
+         z-index: -11;
+        
+    -webkit-animation: orbit2_5 8s linear infinite; 
+       -moz-animation: orbit2_5 8s linear infinite; 
+         -o-animation: orbit2_5 8s linear infinite; 
+            animation: orbit2_5 8s linear infinite; 
+}
+    
+
+    
+#sun {
+  position: absolute;
+  left: 293px;
+  top: 292px;
+}
+    
+
+    
+@-webkit-keyframes orbit0 {
+	from { 	-webkit-transform: rotate(0deg);  }
+	to   {  -webkit-transform: rotate(360deg);}
+}
+
+@-moz-keyframes orbit0 {
+	from { 	-moz-transform: rotate(0deg); }
+	to   {  -moz-transform: rotate(360deg); }
+}
+
+@-o-keyframes orbit0 {
+	from { 	-o-transform: rotate(0deg); }
+	to   {  -o-transform: rotate(360deg); }
+}
+
+@keyframes orbit0 {
+	from { 	transform: rotate(0deg); }
+	to   {  transform: rotate(360deg); }
+}
+</style>
+
+
+
+
+</head>
+
+<body>
+
+    <a id="example2" href="#" class="example" onclick="return false;">
+        <div class="hundi"></div>
+        
+        <img class="saturn animated" src="rotation/1.png">
+        <img class="saturn2 animated" src="rotation/2.png">
+        <img class="saturn3 animated" src="rotation/3.png">
+        <img class="saturn4 animated" src="rotation/4.png">
+        <img class="saturn5 animated" src="rotation/5.png">
+    </a>
+</body>
+
+</html>

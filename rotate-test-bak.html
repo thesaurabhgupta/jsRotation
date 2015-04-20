@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<style>
+
+@keyframes circle {
+    from { transform:rotate(0deg); }
+    to { transform:rotate(360deg); }
+}
+
+@keyframes inner-circle {
+    from { transform:rotate(0deg); }
+    to { transform:rotate(-360deg); }
+}
+body{border:1px solid green;}
+body > div {
+    border:1px solid red;
+    width:100px;
+    height:100px;
+    margin: 0px auto 0;
+    color:orange;
+    font-size:100px;
+    line-height:1;
+    animation: circle 5s linear infinite;
+    transform-origin:50% 300px;
+}
+
+div > div {
+    animation: inner-circle 5s linear infinite;
+    border:1px solid blue;
+}
+
+</style>
+
+
+
+
+</head>
+
+<body>
+<div>
+<div><div>☻</div></div>
+</div>
+
+</body>
+
+</html>

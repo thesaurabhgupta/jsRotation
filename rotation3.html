@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+    
+<style>
+    
+    @-webkit-keyframes orbit0 {
+	from { 	-webkit-transform: rotate(0deg);  }
+	to   {  -webkit-transform: rotate(360deg);}
+}
+
+@-moz-keyframes orbit0 {
+	from { 	-moz-transform: rotate(0deg); }
+	to   {  -moz-transform: rotate(360deg); }
+}
+
+@-o-keyframes orbit0 {
+	from { 	-o-transform: rotate(0deg); }
+	to   {  -o-transform: rotate(360deg); }
+}
+
+@keyframes orbit0 {
+	from { 	transform: rotate(0deg); }
+	to   {  transform: rotate(360deg); }
+}
+    
+.hundi{
+  background: url('rotation/center.png');
+  background-position: center 209px;
+  background-repeat: no-repeat;
+  position: absolute;
+  display: block;
+  width: 644px;
+  border: none;
+  margin: 0 auto;
+  height: 644px;
+  overflow: hidden;
+  z-index: 999px;
+}
+    
+.arrow{
+  background: url('rotation/arrow.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  display: block;
+  width: 644px;
+  border: none;
+  margin: 0 auto;
+  height: 644px;
+  overflow: hidden;
+  z-index: -1;
+    display: none;
+     
+    
+    
+    -webkit-animation: orbit0 8s linear infinite; 
+       -moz-animation: orbit0 8s linear infinite; 
+         -o-animation: orbit0 8s linear infinite; 
+            animation: orbit0 8s linear infinite; 
+}
+    
+.example{
+  background: url('rotation/circle.png');
+  background-position: center 152px;
+/*  background-position: center 0px;*/
+  background-repeat: no-repeat;
+  position: relative;
+  display: block;
+  width: 644px;
+  border: none;
+  margin: 0 auto;
+  height: 644px;
+  overflow: hidden;
+}
+    
+.saturn {
+    left: 234px;
+    position: absolute;
+    top: 233px;
+    z-index: -1;
+/*   display: none;*/
+}
+    
+    
+#sun {
+  position: absolute;
+  left: 293px;
+  top: 292px;
+}
+    
+</style>
+
+<script>
+
+    $(document).ready(function () {
+        
+        var startCircle=0;
+        var nextCircle=24;
+        
+        var interval=72;
+        
+        var _s1=0;
+        var _n1=0;
+        
+        var j=-18;
+                
+        setInterval(function(){
+            
+            $('.arrow').show();
+        
+            for(var i=0;i<=(360/72);i++){
+            
+                _s1=i*interval+j;
+                _n1=_s1+interval;
+                
+               // console.log("_s1="+_s1+", _n1="+_n1+", j="+j);
+               
+                AnimateRotate(_s1,_n1,'#saturn'+i);
+                
+                
+            }
+            
+            
+           
+            
+            _s1=_n1;
+            _n1=_n1+interval;
+            j=j+interval;
+            
+            if(j>540){
+                j=-18;
+            }
+            
+            
+             //console.log("startCircle="+startCircle+", nextCircle="+nextCircle);
+             //AnimateRotate1(startCircle,nextCircle);
+            
+//            startCircle=nextCircle;
+//            nextCircle+=24;
+//            
+//            if(nextCircle>360){
+//                startCircle=0;
+//                nextCircle=24;
+//            }
+            
+            
+            
+           /* 
+            AnimateRotate(start,next,'#saturn1');
+            
+            start = next;
+            next  = next+45;
+            
+            if(next>360){
+                next=45;
+                start=0;
+            }
+        
+             AnimateRotate(s1,n1,'#saturn2');
+            s1 = n1;
+            n1  = n1+45;
+            
+            if(n1>405){
+                n1=90;
+                s1=45;
+            }*/
+        
+        
+        },4500);
+        
+        
+         /*setInterval(function(){
+                 
+                 AnimateRotate1(startCircle,nextCircle);
+                 
+                  startCircle=nextCircle;
+            nextCircle+=24;
+            
+            if(nextCircle>360){
+                startCircle=0;
+                nextCircle=24;
+            }
+             },4500);*/
+});
+   
+    
+    
+    
+    function AnimateRotate(s,d,selectr){
+    var elem = $(selectr);
+
+    $({deg: s}).animate({deg: d}, {
+        duration: 1000,
+        step: function(now){
+            elem.css({
+                 transform: "rotate(" + now + "deg) translateX(230px) rotate(-" + now + "deg)"
+            });
+        }
+    });
+}
+    
+    
+ 
+  function AnimateRotate1(s,d){
+    var elem = $('.arrow');
+
+    $({deg: s}).animate({deg: d}, {
+        duration: 1000,
+        step: function(now){
+            elem.css({
+                 transform: "rotate(" + now + "deg)"
+            });
+        }
+    });
+}
+</script>
+
+
+</head>
+
+<body>
+
+    <a id="example2" href="#" class="example" onclick="return false;">
+        <div class="hundi"></div>
+        <div class="arrow"></div>
+        
+        <img id="saturn1" class="saturn animated" src="rotation/1.png">
+        <img id="saturn2" class="saturn animated" src="rotation/2.png">
+        <img id="saturn3" class="saturn animated" src="rotation/3.png">
+        <img id="saturn4" class="saturn animated" src="rotation/4.png">
+        <img id="saturn5" class="saturn animated" src="rotation/5.png">
+       
+    </a>
+</body>
+
+</html>

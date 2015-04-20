@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<style>
+
+@keyframes circle {
+    from { transform:rotate(0deg); }
+    to { transform:rotate(360deg); }
+}
+
+@keyframes inner-circle {
+    from { transform:rotate(0deg); }
+    to { transform:rotate(-360deg); }
+}
+body{border:1px solid green;}
+body  div.rotate {
+    border:1px solid red;
+    width:187px;
+    height:175px;
+    margin: 0px auto 0;
+    color:orange;
+/*    font-size:100px;*/
+    line-height:1;
+    animation: circle 10s linear infinite;
+    transform-origin:50% 320px;
+}
+
+div.rotate div {
+    animation: inner-circle 10s linear infinite;
+    border:1px solid blue;
+}
+
+.bgprocess{
+    
+    background-image:url(rotation/Full1.png); background-repeat: no-repeat; width: 633px;  height:670px; }
+</style>
+
+
+
+
+</head>
+
+<body>
+<div class="bgprocess">
+<div class="rotate"><div><img src="rotation/1.png"></div></div>
+</div>
+</body>
+
+</html>
